@@ -1,0 +1,16 @@
+Path to files of interest,
+
+PeopleSoft 13 GiB download -> V837076-01_2of4.zip -> PT-DPK-LNX-8.55.12-1of2.zip -> archives/pt-pshome8.55.12.tgz ->
+
+bin/libpscmn.so
+bin/libpspcm.so
+
+These files are included in this repository.
+
+...
+
+CPCEvalServer::EvalHash -> known to be sha1_64(utf16($p)) -> dynamic_1032 in JtR jumbo
+
+CPCEvalServer::EvalHashWithSalt -> calls CmnHashMasterWithSalt -> (reversing needed here) -> calls SHA-1 and does base64 encoding -> similar to dynamic_1032?
+
+CPCEvalServer::EvalHashSHA256 (calls CmnHashSHA256) is also of interest.
